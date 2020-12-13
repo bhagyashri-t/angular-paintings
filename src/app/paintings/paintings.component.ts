@@ -17,28 +17,12 @@ export class PaintingsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    //this.setPaintingData();
-    //this.getPaintingsData();
-    // this.paintings = this.paintingService.paintingsData;
   }
 
   ngOnDestroy() {
-   // this.subscription.unsubsrcibe();
   }
 
   getPaintingsData() {
-    // this.paintingService.getPaintingsData().subscribe(
-    //   (resp:any)=>{
-    //     console.log(resp);
-    //     this.paintings = resp;
-    //     this.paintingService.paintingsData = resp;
-    //     console.log(this.paintingService.paintingsData);
-    //   },
-    //   (err:any)=>{
-    //     console.log(err);
-    // }); 
-    // console.log("getPaintingsData : ", this.paintings);
-
     this.paintings = this.paintingService.paintingsData;
   }
 
@@ -52,10 +36,4 @@ export class PaintingsComponent implements OnInit, OnDestroy {
   addNewPainting(painting: any) {
     this.paintingService.addNewPainting(painting);
   }
-
-  // setPaintingData() {
-  //   // console.log(this.paintingService.setData());
-
-  //   // this.paintingService.paintingsData.push(this.paintings) ;
-  // }
 }

@@ -8,22 +8,15 @@ import { AuthService } from '../services/auth.service';
 })
 export class HeaderComponent implements OnInit, OnChanges, DoCheck {
   title = 'angular-paintings';
-  isAuthenticated: any = JSON.parse(sessionStorage.getItem('isAuthenticated'));;
+  isAuthenticated: any = JSON.parse(sessionStorage.getItem('isAuthenticated') || '');
   
-  constructor(private authService: AuthService) {
-    
-   }
+  constructor(private authService: AuthService) { }
   
   ngOnChanges() {
-    // this.isAuthenticated = JSON.parse(sessionStorage.getItem('isAuthenticated'));
-    // console.log("isAuthenticated in header in OnChanges : ", this.isAuthenticated);
-    // console.log("isAuthenticated typeOf in header : ", typeof this.isAuthenticated);
   }
 
   ngDoCheck() {
-    this.isAuthenticated = JSON.parse(sessionStorage.getItem('isAuthenticated'));
-    console.log("isAuthenticated in header in DoCheck : ", this.isAuthenticated);
-    console.log("isAuthenticated typeOf in header : ", typeof this.isAuthenticated);
+    this.isAuthenticated = JSON.parse(sessionStorage.getItem('isAuthenticated') || '');
   }
   ngOnInit(): void {
   }

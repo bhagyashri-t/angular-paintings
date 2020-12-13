@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PaintingService {
-  paintingsData : any = JSON.parse(sessionStorage.getItem('paintings'));
+  paintingsData : any ;
   dataToUpdate : any = {};
 
   constructor(private http: HttpClient) { }
@@ -25,7 +25,6 @@ export class PaintingService {
   updatePainting(data: any) {
     this.dataToUpdate = data;
     let index = this.paintingsData.findIndex(this.checkId, this);
-    //console.log("Index found : ", index);
     this.paintingsData.splice(index, 1, data);
     sessionStorage.setItem('paintings', JSON.stringify(this.paintingsData));
     this.dataToUpdate = {};

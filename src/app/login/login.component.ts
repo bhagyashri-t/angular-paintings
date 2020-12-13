@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { PaintingService } from '../services/painting.service';
@@ -11,10 +11,10 @@ import { PaintingService } from '../services/painting.service';
 })
 export class LoginComponent implements OnInit {
 
-  form: FormGroup;
+  form: FormGroup = new FormGroup({});
   public loginInvalid: Boolean = true;
-  private formSubmitAttempt: boolean;
-  private returnUrl: string;
+  private formSubmitAttempt: boolean = false;
+  private returnUrl: string = "";
 
   constructor(private route:ActivatedRoute, 
               private paintingService: PaintingService,
@@ -43,8 +43,8 @@ export class LoginComponent implements OnInit {
     this.formSubmitAttempt = false;
     if(this.form.valid) {
       try {
-        const username = this.form.get('username').value;
-        const password = this.form.get('password').value;
+        const username = this.form.value.username;
+        const password = this.form.value.password;
         await this.authService.login(username, password).then((response) => {
           console.log("Login response: ", response);
         });
@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit {
     this.route.data.subscribe((res) => {
       console.log("app component data: " ,res);
       this.paintingService.paintingsData = res.paintings;
-      sessionStorage.setItem('paintings',JSON.stringify(res.paintings));
+      sessionStorage.setItem('paintings', JSON.stringify(res.paintings) || '');
     })
   }
 }
