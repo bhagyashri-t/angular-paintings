@@ -1,0 +1,54 @@
+[{
+    "id": 1,
+    "name": "Abtract Oil Painting",
+    "artist": "Pablo Picasso",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra tellus in hac habitasse platea dictumst. Iaculis eu non diam phasellus vestibulum lorem.",
+    "type": "Oil painting",
+    "cost": 100,
+    "url": "assets/images/abstract-textured-oil-painting.jpg"
+},
+{
+    "id": 2,
+    "name": "Fish Graphic Nature",
+    "artist": "Pablo Picasso",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra tellus in hac habitasse platea dictumst. Iaculis eu non diam phasellus vestibulum lorem.",
+    "type": "Oil painting",
+    "cost": 100,
+    "url":"assets/images/drawing-fish-japanese-water-graphic-nature.jpg"
+},
+{
+    "id": 3,
+    "name": "Garden White Art",
+    "artist": "John Martin",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra tellus in hac habitasse platea dictumst. Iaculis eu non diam phasellus vestibulum lorem.",
+    "type": "Watercolor painting",
+    "cost": 100,
+    "url": "assets/images/garden-white-beautiful-art-element-japan.jpg"
+},
+{
+    "id": 4,
+    "name": "Greenwood",
+    "artist": "Pablo Picasso",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra tellus in hac habitasse platea dictumst. Iaculis eu non diam phasellus vestibulum lorem.",
+    "type": "Chalk painting",
+    "cost": 100,
+    "url": "assets/images/greenwood-89662_1280.jpg"
+},
+{
+    "id": 5,
+    "name": "Lotus Flower",
+    "artist": "Edvard Munch",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra tellus in hac habitasse platea dictumst. Iaculis eu non diam phasellus vestibulum lorem.",
+    "type": "Watercolor painting",
+    "cost": 100,
+    "url": "assets/images/oil-painting-beautiful-lotus-flower.jpg"
+},
+{
+    "id": 6,
+    "name": "Space Abstract",
+    "artist": "Andy Warhol",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra tellus in hac habitasse platea dictumst. Iaculis eu non diam phasellus vestibulum lorem.",
+    "type": "Oil painting",
+    "cost": 100,
+    "url": "assets/images/top-view-artistic-copy-space-abstract-painting.jpg"
+}]

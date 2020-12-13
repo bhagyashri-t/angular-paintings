@@ -1,0 +1,12 @@
+
+<!-- <mat-grid-list cols="2" rowHeight="2:1" > -->
+<div class="container">
+    <mat-card  (click)="openDialog(painting)" class="painting-card" *ngFor="let painting of paintings">
+        <mat-card-header>
+            <mat-card-title> {{ painting.name }} </mat-card-title>
+            <mat-card-subtitle> {{painting.artist}} </mat-card-subtitle>
+        </mat-card-header>
+        <img class="images" mat-card-image src={{painting.url}} alt={{painting.name}}>
+    </mat-card>
+</div>
+<!-- </mat-grid-list> -->

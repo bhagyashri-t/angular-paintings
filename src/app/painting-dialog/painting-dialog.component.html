@@ -1,0 +1,16 @@
+<!-- <h1 mat-dialog-title></h1> -->
+<div mat-dialog-content>
+    <mat-card-header>
+        <mat-card-title>{{data.name}}</mat-card-title>
+        <mat-card-subtitle>{{data.artist}}</mat-card-subtitle>
+        
+    </mat-card-header>
+    <img class="images" mat-card-image src={{data.url}} alt={{data.name}}>
+    <span><b> {{ data.cost | currency:'USD' }} </b></span><br>
+    <p> {{data.description}} </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click) = "modifyPaintings(data)" >Modify</button>
+  <button mat-button (click) = "deletePainting(data)">Delete</button>
+  <button mat-button [mat-dialog-close]="true"> Close </button>
+</div>

@@ -1,0 +1,40 @@
+<div class="managePaintingsContainer">
+    <form id="managePaintingsForm" [formGroup]="managePaintingsForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label> Painting name: </mat-label>
+            <input matInput formControlName="name" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label> Creator: </mat-label>
+            <input matInput formControlName="artist" type="text"> 
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Paintings url</mat-label>
+            <input matInput formControlName="url" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label> Painting type: </mat-label>
+            <input matInput formControlName="type" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label> Price: </mat-label>
+            <input matInput formControlName="cost" type="text">
+        </mat-form-field>
+        <br>
+        <mat-hint *ngIf="!managePaintingsForm.valid && managePaintingsForm.touched"> Please fill up all the fields. </mat-hint><br>
+        <div class="manageFormBtns">
+            <button mat-raised-button color="primary" type="submit" [disabled]="!managePaintingsForm.valid">Save</button>
+            <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+        </div>
+        
+    </form>
+</div>
