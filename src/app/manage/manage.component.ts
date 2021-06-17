@@ -14,7 +14,7 @@ export class ManageComponent implements OnInit {
   paintingData: any = {};
   isRedirectedFromPaintings = false;
 
-  constructor( private fb: FormBuilder,
+  constructor(  private fb: FormBuilder,
                 private router: Router, 
                 private paintingService: PaintingService) { 
                   this.paintingData = this.getRouterData();

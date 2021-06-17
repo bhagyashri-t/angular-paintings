@@ -23,7 +23,11 @@ export class PaintingsComponent implements OnInit, OnDestroy {
   }
 
   getPaintingsData() {
-    this.paintings = this.paintingService.paintingsData;
+    this.paintingService.getPaintingsData().subscribe((response) => {
+      this.paintings = response;
+      this.paintingService.paintingsData = response;
+    });
+    console.log(this.paintings);
   }
 
   openDialog(painting:any) {

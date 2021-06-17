@@ -8,7 +8,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class HeaderComponent implements OnInit, OnChanges, DoCheck {
   title = 'angular-paintings';
-  isAuthenticated: any = JSON.parse(sessionStorage.getItem('isAuthenticated') || '');
+  // isAuthenticated: any = JSON.parse(sessionStorage.getItem('isAuthenticated') || '');
   
   constructor(private authService: AuthService) { }
   
@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit, OnChanges, DoCheck {
   }
 
   ngDoCheck() {
-    this.isAuthenticated = JSON.parse(sessionStorage.getItem('isAuthenticated') || '');
+    // this.isAuthenticated = JSON.parse(sessionStorage.getItem('isAuthenticated') || '');
   }
   ngOnInit(): void {
   }

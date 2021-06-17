@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class PaintingsResolverService {
 
   constructor(private http: HttpClient) { }
-  resolve(route: ActivatedRouteSnapshot, rsState: RouterStateSnapshot): Observable<any> {
+  resolve(rsState: RouterStateSnapshot): Observable<any> {
     return this.http.get('../../assets/paintings.json');
   }
 }

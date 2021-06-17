@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { PaintingService } from '../services/painting.service';
+// import { PaintingService } from '../services/painting.service';
 
 @Component({
   selector: 'app-painting-dialog',
@@ -10,10 +11,10 @@ import { PaintingService } from '../services/painting.service';
 })
 export class PaintingDialogComponent implements OnInit {
 
-  constructor(private paintingService:PaintingDialogComponent,
+  constructor(private paintingService:PaintingService,
             @Inject(MAT_DIALOG_DATA) public data:any, 
-            private router: Router, 
-            public dialog: MatDialog) { }
+            private router: Router,
+            private dialog:MatDialog) { }
 
   ngOnInit(): void {
     //console.log(this.data);
@@ -28,6 +29,7 @@ export class PaintingDialogComponent implements OnInit {
   deletePainting(data: any) {
     //console.log("Painting deleted: ", data);
     this.paintingService.deletePainting(data);
+    alert("Deleted Succesfully!");
     this.dialog.closeAll();
     this.router.navigateByUrl('/paintings');
   }
