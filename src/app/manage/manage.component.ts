@@ -21,7 +21,6 @@ export class ManageComponent implements OnInit {
                   console.log("Data from paintings : ", this.paintingData);
                   this.formValidator();
                   if(this.paintingData) {
-                    console.log("inside if condition")
                     this.setFormData(this.paintingData);
                     this.isRedirectedFromPaintings = true;
                   }
